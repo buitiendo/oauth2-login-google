@@ -1,0 +1,19 @@
+efault: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password: 1234
+  socket: /tmp/mysql.sock
+
+development:
+  <<: *default
+  database: oauth2-login-google_development
+test:
+  <<: *default
+  database: oauth2-login-google_test
+production:
+  <<: *default
+  database: oauth2-login-google_production
+  username: oauth2-login-google
+  password: 5
